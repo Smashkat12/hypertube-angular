@@ -1,1 +1,148 @@
-/* You can add global styles to this file, and also import other style files */
+.no-selection {
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+::selection {
+  background: rgba(123, 169, 247, 0.3);
+}
+::-webkit-scrollbar {
+  background: black;
+  width: 12px;
+}
+
+/*
+=====
+Reset
+=====
+*/
+
+:focus {
+  outline: none;
+}
+* {
+  outline: none;
+  border: 0px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/*
+==========
+Responsive
+==========
+*/
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+  .search-bar-collapse,
+  .movie-page-lowres {
+    display: none !important;
+  }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .search-bar-collapse,
+  .movie-page-lowres {
+    display: none !important;
+  }
+  .dark-card,
+  .dark-input {
+    width: 75% !important;
+  }
+  .dark-input {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .search-bar,
+  .movie-page {
+    display: none !important;
+  }
+  .show-search-bar,
+  .movie-page-lowres {
+    display: block !important;
+  }
+  .movie-page-lowres {
+    margin-top: -20px;
+  }
+  .dark-card,
+  .dark-input {
+    width: 100% !important;
+  }
+  .dark-input {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .search-bar,
+  .movie-page {
+    display: none !important;
+  }
+  .show-search-bar,
+  .movie-page-lowres {
+    display: block !important;
+  }
+  .movie-page-lowres {
+    margin-top: -20px;
+  }
+  .dark-card,
+  .dark-input {
+    width: 100% !important;
+  }
+  .dark-input {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .logo {
+    width: 150px !important;
+  }
+  .App-header {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .search-bar,
+  .movie-page {
+    display: none !important;
+  }
+  .show-search-bar,
+  .movie-page-lowres {
+    display: block !important;
+  }
+  .movie-page-lowres {
+    margin-top: -20px;
+  }
+  .dark-card,
+  .dark-input {
+    width: 100% !important;
+  }
+  .dark-input {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .logo {
+    width: 150px !important;
+  }
+  .App-header {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
