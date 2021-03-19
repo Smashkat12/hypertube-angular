@@ -10,6 +10,7 @@ import { Movies } from 'src/app/models/movie-list.model';
 })
 export class MovieListComponent implements OnInit {
 
+  inProgress = false;
   currentRate = 0
   movies$: Observable<Movies[]>;
 
@@ -19,6 +20,12 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit() {
   
+  }
+
+  checkDatabase(id: number) {
+    if(this.inProgress) return;
+
+    
   }
 
 }

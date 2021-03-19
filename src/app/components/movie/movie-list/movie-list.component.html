@@ -2,27 +2,29 @@
   <div *ngIf="movies$ | async as movies" class="posters-list row wrap">
     <div *ngFor="let movie of movies">
       <div class="poster-container">
-        <img
-          class="movie-poster"
-          [src]="movie.large_cover_image"
-          [alt]="movie.title"
-        />
-        <div class="poster-overlay">
-          <div class="poster-content">
-            <h3>{{ movie.title }}</h3>
-            <p>{{ movie.description_full }}</p>
-            <div class="row center">
-              <span>
-                <ngb-rating
-                  [max]="5"
-                  [(rate)]="currentRate"
-                  [readonly]="false"
-                ></ngb-rating>
-              </span>
-              <span>{{ movie.rating }}</span>
+        <a [routerLink]="[movie.id]">
+          <img
+            class="movie-poster"
+            [src]="movie.large_cover_image"
+            [alt]="movie.title"
+          />
+          <div class="poster-overlay">
+            <div class="poster-content">
+              <h3>{{ movie.title }}</h3>
+              <p>{{ movie.description_full }}</p>
+              <div class="row center">
+                <span>
+                  <ngb-rating
+                    [max]="5"
+                    [(rate)]="currentRate"
+                    [readonly]="false"
+                  ></ngb-rating>
+                </span>
+                <span>{{ movie.rating }}</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
