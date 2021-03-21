@@ -1,14 +1,39 @@
 <header>
-    <div>
-        <div class="App-header align-center">
-            <!-- Add links here -->
-            <a href="#"><img src="../../../assets/logo.png" alt="logo" class="logo"></a>
-            <div class="search-bar">
-                <div class="row align-center">
-                    <input  type="text" class="input-search-bar" spellCheck="false" placeholder="search..."/>
-                </div>
-            </div>
-
+  <div>
+    <div class="App-header align-center">
+      <!-- Add links here -->
+      <a routerlink="/">
+        <img src="../../../assets/logo.png" alt="logo" class="logo" />
+      </a>
+      <div class="search-bar">
+        <div class="row align-center">
+          <input
+            type="text"
+            class="input-search-bar"
+            spellcheck="false"
+            placeholder="search..."
+          />
+          <mat-icon class="submit-search-bar">search</mat-icon>
         </div>
+      </div>
+      <div>
+        <img
+          class="avatar"
+          src="https://avatars1.githubusercontent.com/u/38104004?v=4"
+          alt="User Avatar"
+        />
+        <div class="avatar-dropdown">
+          <a routerlink="/profile">
+            <div class="avatar-dropdown-item">Profile</div>
+          </a>
+          <a routerlink="/settings">
+            <div class="avatar-dropdown-item">Settings</div>
+          </a>
+          <a routerlink="/logout">
+            <div class="avatar-dropdown-item">Logout</div>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </header>

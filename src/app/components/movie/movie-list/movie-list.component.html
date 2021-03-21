@@ -1,8 +1,8 @@
 <div>
-  <div *ngIf="movies$ | async as movies" class="posters-list row wrap">
-    <div *ngFor="let movie of movies">
+  <div *ngif="movies$ | async as movies" class="posters-list row wrap">
+    <div *ngfor="let movie of movies">
       <div class="poster-container">
-        <a [routerLink]="[movie.id]">
+        <a routerlink="[movie.id]">
           <img
             class="movie-poster"
             [src]="movie.large_cover_image"

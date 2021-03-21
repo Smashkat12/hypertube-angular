@@ -1,44 +1,98 @@
 header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    .App-header {
+  .App-header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #04050c;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+
+    .logo {
+      width: 200px;
+    }
+    .search-bar {
+      display: block;
+      background-color: white;
+      height: 40px;
+      border-radius: 20px 20px 20px 20px;
+      background-color: rgb(47, 60, 83);
+      z-index: 9;
+      .row.align-center {
         display: flex;
-        justify-content: space-between;
-        color: white;
-        background-color: #04050c;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 50px;
-        padding-right: 50px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box; /* Firefox, other Gecko */
-        box-sizing: border-box; /* Opera/IE 8+ */
-      
-        .logo {
-          width: 200px;
-        }
-        .search-bar {
-          display: block;
-          background-color: white;
+        flex-direction: row;
+        align-items: center;
+        .input-search-bar {
+          background-color: transparent;
           height: 40px;
-          border-radius: 20px 20px 20px 20px;
-          background-color: rgb(47, 60, 83);
-          z-index: 9;
-          .input-search-bar {
-            background-color: transparent;
-            height: 40px;
-            width: 300px;
-            padding-left: 20px;
-            transition: all 0.5s ease;
-            color: rgb(170, 181, 201);
-          }
-          .input-search-bar:focus {
+          width: 300px;
+          padding-left: 20px;
+          transition: all 0.5s ease;
+          color: rgb(170, 181, 201);
+
+          &:focus {
             width: 400px;
           }
         }
+        .submit-search-bar {
+          color: white;
+          font-size: 25px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+    }
+    .avatar {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 0px 5px rgba(5, 95, 176, 1);
+      }
+    }
+    .avatar-dropdown {
+      display: none;
+      position: absolute;
+      background-color: #2f3c53;
+      width: 120px;
+      left: -35px;
+      z-index: 10;
+      font-size: 0.8em;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+      &:after {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        position: absolute;
+        border-bottom-color: #2f3c53;
+        border-width: 10px;
+        margin-left: -10px;
       }
 
+      .avatar-dropdown-item {
+        padding: 10px;
+        word-break: break-word;
+
+        &:hover {
+          background-color: rgb(41, 53, 73);
+          border-radius: 5px;
+        }
+      }
+    }
+  }
 }
-
-
